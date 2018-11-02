@@ -1,0 +1,31 @@
+input[type="number"]{
+  width:25px;
+  height:10px;
+  font-size: .5em;
+}
+button {margin-left:5px;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+.graphbtn{
+  display:inline;
+  position:relative;
+}
+#GUI{
+  border:2px solid black;
+  position:absolute; top:50px; left:550px;
+  width:350px; height: 400px;
+  padding:20px;
+}
+.hasBorder{border: 1px solid #8b7d7b;margin-left:5px;background-color:#DCDCDC;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+  }
+.hasBorder:hover{background-color:#c6c6c6;}
+.hasBorder button{top:-2px;}
+#theta{font-size: .8em;}
+p{padding:5px;
+  line-height:140%;}

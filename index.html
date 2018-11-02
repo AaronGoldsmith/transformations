@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" src="./style.css" />
+		<link rel="text/javascript" src="./transformations.js" />
+	</head>
+
+<body>
+
+<div id = "GUI">
+	<h2>Controls</h2>
+	<button id = "un" onclick="hide()" style="position:relative;">Show Dots</button>
+	<button id = "clear" onclick ="clearC()" style="position:relative;">Clear Canvas</button>
+	<button id = "undo" onclick ="undoPoint()" style="position:relative;">Undo Point</button>
+	<button id = "Lock" onclick ="addPts()" style="position:relative;">Lock in Points</button>
+
+<p class ="hasBorder"  style="width:290px;position:relative; top:50px;">Reflect over:
+	<button id = "flipX" onclick = "flipX()" style ="position:relative;">X-axis</button>
+	<button id = "flipY" onclick = "flipY()" style ="position:relative;">Y-axis</button>
+	<button id = "flipYX" onclick = "flipYX()" style "position:relative;">y=x axis</button>
+</p>
+
+<p class="hasBorder" style="position:relative;top:50px; width:290px; height:70px;">
+	Scale (x,y):
+	(<input style:"display:inline" id="scale-unitx" min="-50" max ="50"  type="number">,
+	<input style:"display:inline" id="scale-unity" min="-50" max ="50"  type="number">)
+	<br>Rotate (<span style="font-size:.8em">&#920</span> &deg):
+	<input style:"display:inline;"  id="rotate" min="-50" max ="50" type="number">
+	<br>Translate (x,y):
+	 (<input style:"display:inline" id="transx" min="-50" max ="50"type="number">,
+	<input style:"display:inline" id="transy" min="-50" max ="50"  type="number">)
+	<br><button style="position:relative;left:210px;top:-55px" id="transform" onclick="transform()">Transform</button>
+</p>
+<p class="hasBorder" style="position:relative;top:50px; width:290px">
+	Graph:
+	<button id = "graphyx" onclick = "graph_funct(1)" class="graphbtn">y=x</button>
+	<button id = "graphxsqrd" onclick ="graph_funct(2)" class="graphbtn">y = x<sup>2</sup></button>
+	<button id = "graphyx" onclick = "graph_funct(3)" class="graphbtn">y=x<sup>3</sup></button>
+	<button id = "graphAmb" onclick = "graph_funct(4)" class="graphbtn">y=ax<sup>n</sup> +c
+	</button> <br>
+	<span id="a" style="font-size:.9em"> a: <input id="pow" style="width:20px;height:10px;"type="number"></span>
+	<span id="n" style="font-size:.9em"> n: <input id="pow1" style="width:20px;height:10px;"type="number"></span>
+	<span id="c" style="font-size:.9em"> c: <input id="pow2" style="width:20px;height:10px;"type="number"></span>
+	<span style="margin-left:20%;font-size:.8em;" id ="eqn">y = ax</span><sup style="font-size:.4em;" id="eqnN">n</sup><span style="font-size:.8em;" id="eqnc"> + c</span>
+
+
+
+	<br>Start and end points: (
+	<input style:"display:inline" id="s" min="-50" max ="50" value = "-10" type="number">,
+	<input style:"display:inline" id ="e" min="-50" max="50" value="10" type ="number" >)
+</p>
+
+</div>
+
+<canvas id="canvas" width="500" height="500" style="border:1px solid black"> </canvas>
+
+
+</body>
+</html>
